@@ -45,8 +45,8 @@ fn main() {
     
     ownership::owner_ship();
     borrow::borrow();
-   // structs::main();
-    schoolMIS::main();
+    structs::main();
+    school_MIS::main();
 }
 
 
