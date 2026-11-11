@@ -1,17 +1,16 @@
-
-use crate::Enums;
+use crate::enums;
 
 #[derive(Debug)]
 struct Student {
     name: String,
     age: u32,
     marks: f32,
-    status: Enums::StudentStatus,
+    status: enums::StudentStatus,
 }
 
 
 impl Student {
-    fn new(name: String, age: u32, marks: f32, status: Enums::StudentStatus) -> Student {
+    fn new(name: String, age: u32, marks: f32, status: enums::StudentStatus) -> Student {
         Student { name, age, marks, status }
     }
 
@@ -43,8 +42,8 @@ impl Student {
 
 
 pub fn main() {
-    let mut student1 = Student::new(String::from("Alice"), 20, 85.5, Enums::StudentStatus::Active);
-    let mut student2 = Student::new(String::from("Bob"), 22, 35.0, Enums::StudentStatus::Suspended);
+    let mut student1 = Student::new(String::from("Alice"), 20, 85.5, enums::StudentStatus::Active);
+    let mut student2 = Student::new(String::from("Bob"), 22, 35.0, enums::StudentStatus::Suspended);
 
     student1.display();
     student2.display();
@@ -80,14 +79,14 @@ pub fn main() {
 
 
     match student1.status {
-        Enums::StudentStatus::Active => println!("{} is an active student.", student1.get_name()),
-        Enums::StudentStatus::Suspended => println!("{} is suspended.", student1.get_name()),
-        Enums::StudentStatus::Graduated => println!("{} has graduated.", student1.get_name()),
-        _ => println!("{} has an unknown status.", student1.get_name()),
+        enums::StudentStatus::Active => println!("{} is an active student.", student1.get_name()),
+        enums::StudentStatus::Suspended => println!("{} is suspended.", student1.get_name()),
+        enums::StudentStatus::Graduated => println!("{} has graduated.", student1.get_name()),
+        
     }
 
 
-    if let Enums::StudentStatus::Active = student1.status {
+    if let enums::StudentStatus::Active = student1.status {
         println!("{} is an active student.", student1.get_name());
     } else {
         println!("{} is not an active student.", student1.get_name());

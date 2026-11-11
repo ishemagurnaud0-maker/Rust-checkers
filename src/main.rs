@@ -1,7 +1,8 @@
 mod ownership;
 mod borrow;
 mod structs;
-mod schoolMIS;
+mod school_MIS;
+mod enums;
 
 fn add(a: i32, b: i32) -> i32 {
     a + b
