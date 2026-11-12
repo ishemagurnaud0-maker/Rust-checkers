@@ -3,6 +3,8 @@ mod borrow;
 mod structs;
 mod school_mis;
 mod enums;
+mod collections;
+
 
 
 fn add(a: i32, b: i32) -> i32 {
@@ -49,6 +51,7 @@ fn main() {
     borrow::borrow();
     structs::main();
     school_mis::main();
+    collections::collections();
    
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
