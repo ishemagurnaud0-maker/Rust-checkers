@@ -1,8 +1,9 @@
 mod ownership;
 mod borrow;
 mod structs;
-mod school_MIS;
+mod school_mis;
 mod enums;
+
 
 fn add(a: i32, b: i32) -> i32 {
     a + b
@@ -47,7 +48,11 @@ fn main() {
     ownership::owner_ship();
     borrow::borrow();
     structs::main();
-    school_MIS::main();
+    school_mis::main();
+   
+   
+   let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
+   println!("Sum: {:?}", sum);
 }
 
 
