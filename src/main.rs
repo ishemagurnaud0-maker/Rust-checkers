@@ -52,6 +52,7 @@ fn main() {
     structs::main();
     school_mis::main();
     collections::collections();
+    collections::mappings();
    
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
