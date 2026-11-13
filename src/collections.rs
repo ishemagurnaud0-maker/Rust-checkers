@@ -55,7 +55,7 @@ pub fn mappings() {
    scores.remove("John");
 
 
-   for (name, mark) in &scores {
+   for (name, _mark) in &scores {
       match &scores.get(name) {
         Some(mark) => { 
             println!("{} scored {}", name, mark);

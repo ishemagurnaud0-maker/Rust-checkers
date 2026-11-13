@@ -55,7 +55,7 @@ fn main() {
     collections::mappings();
     errors_handler::logger();
     errors_handler::find_panic();
-   
+    errors_handler::main();
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
    println!("Sum: {:?}", sum);
