@@ -4,7 +4,7 @@ mod structs;
 mod school_mis;
 mod enums;
 mod collections;
-
+mod errors_handler;
 
 
 fn add(a: i32, b: i32) -> i32 {
@@ -53,6 +53,8 @@ fn main() {
     school_mis::main();
     collections::collections();
     collections::mappings();
+    errors_handler::logger();
+    errors_handler::find_panic();
    
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
