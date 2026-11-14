@@ -47,15 +47,17 @@ fn main() {
     }
 
     
-    ownership::owner_ship();
-    borrow::borrow();
-    structs::main();
-    school_mis::main();
-    collections::collections();
-    collections::mappings();
-    errors_handler::logger();
-    errors_handler::find_panic();
-    errors_handler::main();
+    // ownership::owner_ship();
+    // borrow::borrow();
+    // structs::main();
+    // school_mis::main();
+    // collections::collections();
+    // collections::mappings();
+    // errors_handler::logger();
+    // errors_handler::find_panic();
+    // errors_handler::main();
+   // errors_handler::calculate_grade(101);
+   errors_handler::custom(0);
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
    println!("Sum: {:?}", sum);
