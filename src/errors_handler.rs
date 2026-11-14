@@ -142,3 +142,53 @@ pub fn custom(id: u32) {
 }
 
 
+pub enum BankError {
+    InsufficientBalance,
+    InvalidAmount,
+    AccountNotFound,
+}
+
+
+impl fmt::Display for BankError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            BankError::InsufficientBalance => {
+                write!(f, "You have insufficient balance on your account.")
+            }
+            BankError::InvalidAmount => {
+                write!(f, "Invalid Amount")
+            }
+            BankError::AccountNotFound => {
+                write!(f, "Account not found")
+            }
+        }
+    }
+}
+
+
+
+pub fn withdraw(amount: f64, balance: f64, account_No: u64) -> Result<(f64, u64), BankError> {
+    let bank_creds: (f64, u64) = (amount, account_No);
+     if amount > balance {
+        Err(BankError::InsufficientBalance)
+     } else if amount <= 0.0 {
+        Err(BankError::InvalidAmount)
+     } else if account_No > 200 {
+        Err(BankError::AccountNotFound)
+     } else {
+        balance - amount;
+        Ok(bank_creds)
+     }
+
+}
+
+pub fn bank(amount: f64, balance: f64, account_No: u64) {
+    match withdraw(amount, balance, account_No) {
+        Ok(bank_creds) => {
+            println!("{} was withdrew from {}", bank_creds.0, bank_creds.1);
+        }
+        Err(error) => {
+            println!("{}", error);
+        }
+    }
+}
