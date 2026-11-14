@@ -26,10 +26,10 @@ pub fn operate(op: Operations) -> Result<f32, &'static str> {
         Operations::Multiply(a,b) => Ok(a * b),
         Operations::Divide(a,b) => if b == 0.0 {
             println!("Error: Division by zero");
-            Err("Division by zero is not allowed")
-        } else { 
-            Ok(a / b)
-        },
+            Err("Math Error")
+    } else { 
+        Ok(a / b)
+    },
     }
 
 
