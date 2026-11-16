@@ -19,3 +19,6 @@ pub fn iterators() {
 
     
 }
+
+
+//combining closures and iterators
