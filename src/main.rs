@@ -5,6 +5,7 @@ mod school_mis;
 mod enums;
 mod collections;
 mod errors_handler;
+mod closures;
 
 
 fn add(a: i32, b: i32) -> i32 {
@@ -59,6 +60,9 @@ fn main() {
    // errors_handler::calculate_grade(101);
   // errors_handler::custom(0);
    errors_handler::bank(20000.00, 5000.00, 100);
+   closures::sum(210,23);
+   closures::use_closures(73.0);
+
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));
    println!("Sum: {:?}", sum);
