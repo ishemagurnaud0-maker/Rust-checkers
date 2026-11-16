@@ -6,6 +6,7 @@ mod enums;
 mod collections;
 mod errors_handler;
 mod closures;
+mod iterators;
 
 
 fn add(a: i32, b: i32) -> i32 {
@@ -62,6 +63,7 @@ fn main() {
    errors_handler::bank(20000.00, 5000.00, 100);
    closures::sum(210,23);
    closures::use_closures(73.0);
+   iterators::iterators();
 
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));

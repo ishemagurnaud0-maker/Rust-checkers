@@ -32,3 +32,16 @@ pub fn use_closures(score: f32) {
 
     check_score(score);
 }
+
+//Transferring ownership of a closure
+
+pub fn change_ownership() {
+
+    let name: String = String::from("John");
+
+    let _greet = move || {
+        println!("Hello, {}", name);
+    };
+
+    // println!("{}", name);  It will lead to a compile time error bcz name has changed ownership
+}
