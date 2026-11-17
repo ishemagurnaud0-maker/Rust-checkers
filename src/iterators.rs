@@ -27,11 +27,11 @@ pub fn iterators() {
 
 
 pub fn use_map_fn() {
-    let add = |mark: i32| mark + 5;
+    let add = |mark: &i32| mark + 5;
 
-    let marks: Vec<i32> = [89, 48, 56, 44, 100];
+    let marks: Vec<i32> = vec![89, 48, 56, 44, 100];
 
-    marks.iter().map(
-        add()
-    )
+   let updated_marks: Vec<i32> = marks.iter().map(add).collect();
+
+    println!("{:?}", updated_marks);
 }
