@@ -35,3 +35,22 @@ pub fn use_map_fn() {
 
     println!("{:?}", updated_marks);
 }
+
+
+// using .filter()
+
+
+pub fn use_filter_fn() {
+    let compare = |mark: &&i32| -> bool {
+        **mark >= 50 
+    };
+    
+    let marks: Vec<i32> = vec![10,20,30,40,50,60,70];
+    let new_marks: Vec<i32> = marks
+       .iter()
+       .filter(compare)
+       .copied()
+       .collect();
+
+    println!("{:?}", new_marks);
+}
