@@ -64,6 +64,7 @@ fn main() {
    closures::sum(210,23);
    closures::use_closures(73.0);
    iterators::iterators();
+   iterators::use_map_fn();
 
    
    let sum: Result<f32, &'static str> = enums::operate(enums::Operations::Add(10.0, 5.0));

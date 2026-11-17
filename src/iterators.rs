@@ -22,3 +22,16 @@ pub fn iterators() {
 
 
 //combining closures and iterators
+
+//using .map()
+
+
+pub fn use_map_fn() {
+    let add = |mark: i32| mark + 5;
+
+    let marks: Vec<i32> = [89, 48, 56, 44, 100];
+
+    marks.iter().map(
+        add()
+    )
+}
